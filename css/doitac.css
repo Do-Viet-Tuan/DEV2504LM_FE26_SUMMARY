@@ -1,0 +1,29 @@
+#banner {
+    margin-top: 8.875rem;
+    position: relative;
+}
+
+#banner .box-banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#banner .logo-banner {
+    max-width: 146px;
+    margin-bottom: 0.75rem;
+}
+
+#banner h2 {
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-family: 'Gotham-Ultra';
+}
+
+
