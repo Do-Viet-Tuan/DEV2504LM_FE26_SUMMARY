@@ -1,0 +1,255 @@
+/* =========================
+   SANPHAM PAGE
+   ========================= */
+
+/* Layout helpers */
+.section {
+    padding: 48px 0;
+    background: #f8f9fa;
+}
+.section .section-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+.section .section-head h3 {
+    font-size: 22px;
+    /* letter-spacing: .5px; */
+}
+.section .section-head a {
+    text-decoration: none;
+    font-size: 14px;
+    opacity: .8;
+}
+.section .section-head a:hover { opacity: 1; }
+
+/* ===== Banner (Slick slider) ===== */
+.banner-slick {
+    position: relative;
+}
+
+.banner-slide {
+    position: relative;
+    width: 100%;
+    max-width: 1925px;
+    height: 527px;
+    border-radius: 10px;
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    outline: none;
+    margin: 0 auto;
+}
+
+/* Đặt ảnh qua class */
+.banner-1 {
+    background-image: url("../imgs/san-pham/SANPHAM-Banner.jpg");
+}
+.banner-2 {
+    background-image: url("../imgs/ve-chung-toi/bg-about-us.jpg");
+}
+.banner-3 {
+    background-image: url("../imgs/ve-chung-toi/ve-chung-toi.jpg");
+}
+
+/* overlay chữ giữ nguyên */
+.banner-caption {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 12px;
+}
+
+
+/* overlay text */
+.banner-caption {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 12px;
+}
+.banner-caption h1 {
+    font-size: clamp(20px, 3.2vw, 40px);
+    color: #fff;
+    text-shadow: 0 8px 24px rgba(0,0,0,.35);
+    margin-bottom: 12px;
+}
+.banner-caption .btn {
+    border-radius: 999px;
+    padding: 8px 18px;
+}
+
+/* slick controls */
+.banner-slick .slick-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 0; 
+    right: 0;
+    text-align: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 3;
+}
+
+.banner-slick .slick-dots li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.banner-slick .slick-dots li button {
+    font-size: 0;
+    width: 12px;
+    height: 12px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.banner-slick .slick-dots li.slick-active button {
+    background: #fff;
+    transform: scale(1.2);
+}
+
+.banner-slick .slick-prev,
+.banner-slick .slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 3;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    color: #333;
+}
+
+.banner-slick .slick-prev:hover,
+.banner-slick .slick-next:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.banner-slick .slick-prev {
+    left: 20px;
+}
+
+.banner-slick .slick-next {
+    right: 20px;
+}
+
+.banner-slick .slick-prev:before,
+.banner-slick .slick-next:before {
+    display: none;
+}
+
+/* ===== Product grid ===== */
+#products { background: #f8f9fa; }
+
+.box-product {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,.05);
+    transition: transform .18s ease, box-shadow .18s ease;
+    height: 100%;
+}
+
+.img-product {
+    position: relative;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+}
+.img-product img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    opacity: 0;
+    transition: transform .35s ease, opacity .35s ease;
+}
+
+
+.info-product {
+    padding: 14px 12px 18px;
+}
+.info-product .name {
+    font-size: 14px;
+    margin-bottom: 6px;
+    line-height: 1.35;
+}
+
+.info-product .name a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+
+.info-product .rating {
+    font-size: 12px;
+    color: #f5a524;
+    margin-bottom: 6px;
+}
+.info-product .price {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+/* small fix for header overlap on mobile */
+@media (max-width: 767.98px) {
+    #banner { margin-top: 72px; }
+    
+    .banner-slick .slick-prev,
+    .banner-slick .slick-next {
+        display: none !important;
+    }
+    
+    .banner-slick .slick-dots {
+        bottom: 15px;
+    }
+    
+    .banner-slide {
+        height: 300px;
+        max-width: 100%;
+    }
+}
+
+/* Responsive cho tablet */
+@media (max-width: 1199.98px) {
+    .banner-slide {
+        height: 400px;
+        max-width: 100%;
+    }
+}
+
+/* Responsive cho desktop nhỏ */
+@media (max-width: 1399.98px) {
+    .banner-slide {
+        height: 450px;
+        max-width: 100%;
+    }
+}
+
+.info-product .desc {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 4px;
+    font-style: italic;
+}
+.info-product .price {
+    font-weight: 700;
+    font-size: 14px;
+}

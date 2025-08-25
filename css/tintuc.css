@@ -1,0 +1,27 @@
+#news {
+    background-color: #f3f3f3;
+    height: 2000px;
+}
+
+
+#news .container>div {
+    background-color: #fff;
+    padding: 1.5rem 0;
+    width: 100%;
+}
+
+#news .col-md-4 h3 {
+      font-size: 1.5rem;
+      color: #bd945f;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-bottom: 12px;
+      line-height: 1.4;
+}
+
+#news .col-md-4 p {
+      font-size: 1.1rem;
+      color: #000;
+      line-height: 1.6;
+}
+
